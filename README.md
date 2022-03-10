@@ -1,4 +1,4 @@
-# todolist
+# To-do list
 
 I made this ToDo list to help me get more familiar with React and React Styling. 
 
