@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #E27D60;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,6 +23,58 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.Test-Class {
+  color: #282c34;
+  width: 50%;
+  text-align: left;
+  background-color: whitesmoke;
+  border-radius: 0px;
+  margin-top: 3px;
+  padding: 2%;
+}
+.checkbox {
+  margin-right: 10px;
+  width: 30px;
+  
+}
+
+input[type=checkbox] {
+  transform: scale(1.5);
+  border: none;
+}
+
+.Text-input {
+  margin-top: 50px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  width: 70%;
+  height: 28px;
+  /* border-radius: 5px; */
+  border: none;
+  background-color: whitesmoke;
+}
+
+.Add-button {
+  
+  
+  color: #E27D60;
+  font-size: 22px;
+  font-weight: bolder;
+  background-color: whitesmoke;
+  border: none;
+  margin-bottom: 5px;
+  text-align:center;
+  height: 30px;
+  
+  
+}
+
+.Input-container {
+  border: 2px solid black;
+  width: 60%
+}
+
 
 .App-link {
   color: #61dafb;
