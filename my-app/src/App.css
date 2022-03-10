@@ -24,19 +24,25 @@
   color: white;
 }
 
-.Test-Class {
-  color: #282c34;
+.Todo-Class {
+  font-size: 20px;
+  position: relative;
+  color: #272b2e;
   width: 50%;
   text-align: left;
   background-color: whitesmoke;
   border-radius: 0px;
   margin-top: 3px;
-  padding: 2%;
+  /* padding-top: 4px; */
+  /* padding-bottom: 4px; */
+  
+  height: 25px;
+
 }
 .checkbox {
   margin-right: 10px;
   width: 30px;
-  
+ 
 }
 
 input[type=checkbox] {
@@ -45,10 +51,12 @@ input[type=checkbox] {
 }
 
 .Text-input {
+  
   margin-top: 50px;
   margin-bottom: 15px;
+  text-align: center;
   font-size: 18px;
-  width: 70%;
+  width: 250px;
   height: 28px;
   /* border-radius: 5px; */
   border: none;
@@ -56,7 +64,6 @@ input[type=checkbox] {
 }
 
 .Add-button {
-  
   
   color: #E27D60;
   font-size: 22px;
