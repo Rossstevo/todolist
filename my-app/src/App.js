@@ -1,14 +1,27 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import './App.css';
 import TodoList from './TodoList';
 import { v4 as uuidv4 } from 'uuid'
 
-
+const LOCAL_STORAGE_KEY = 'todoApp.tools'
 function App() {
 
-// const iD = 1
+
 const [todos, setTodos] = useState([])
 const todoNameRef = useRef();
+
+// on load, display any existing todo's (if there are any). Convert to array using JSON.parse
+useEffect(() => {
+  const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+  if (storedTodos) setTodos(storedTodos)
+}, [])
+
+// save todos to local storage
+useEffect(() => {
+localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
+}, [todos])
+
+
 
 function handleAddTodo(e) {
   // iD = iD + 1;
