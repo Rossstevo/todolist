@@ -1,6 +1,6 @@
 # To-do list
 
-I made this ToDo list to help me get more familiar with React and React Styling. 
+I made this To-do list to get more familiar with React and React Styling. 
 
 I followed a guide set by WebDevSimplified youtube video [https://www.youtube.com/watch?v=hQAHSlTtcmY] to build the app and then added some custom styling. 
 
