@@ -56,7 +56,7 @@ function handleAddTodo(e) {
       <input ref={todoNameRef} type = "text"/>
       <button onClick = {handleAddTodo}>Add Todo</button>
       <button onClick={handleClearTodos}>Clear list</button>
-      <div>{todos.filter(todo => !todo.complete).length} left to do </div>
+      <div>you have {todos.filter(todo => !todo.complete).length} left to do </div>
 
 
 
