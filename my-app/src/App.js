@@ -1,18 +1,22 @@
 import React, {useState, useRef} from 'react';
 import './App.css';
 import TodoList from './TodoList';
-import uuidv4 from 'uuid/v4';
+import { v4 as uuidv4 } from 'uuid'
+
 
 function App() {
-{/* empty array because we have no to-do's */}
+
+// const iD = 1
 const [todos, setTodos] = useState([])
 const todoNameRef = useRef();
 
 function handleAddTodo(e) {
+  // iD = iD + 1;
+  
   const name = todoNameRef.current.value
   if (name === '') return 
     setTodos(prevTodos => {
-      return [...prevTodos, {id: 1, name: name, complete: false}]
+      return [...prevTodos, {id: uuidv4(), name: name, complete: false}]
     }
       )
     console.log(name)
