@@ -29,6 +29,10 @@ function toggleTodo(id) {
   setTodos(newTodos)
 }
 
+function handleClearTodos(e) {
+  const newTodos =todos.filter(todo => !todo.complete)
+  setTodos(newTodos)
+}
 
 function handleAddTodo(e) {
   // iD = iD + 1;
@@ -51,8 +55,8 @@ function handleAddTodo(e) {
       <TodoList todos={todos} toggleTodo={toggleTodo}/>
       <input ref={todoNameRef} type = "text"/>
       <button onClick = {handleAddTodo}>Add Todo</button>
-      <button>Clear list</button>
-      <div>0 left to do </div>
+      <button onClick={handleClearTodos}>Clear list</button>
+      <div>{todos.filter(todo => !todo.complete).length} left to do </div>
 
 
 
