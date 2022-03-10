@@ -21,6 +21,13 @@ useEffect(() => {
 localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
 }, [todos])
 
+// togle Todos from incomplete/complete
+function toggleTodo(id) {
+  const newTodos = [...todos]
+  const todo = newTodos.find(todo => todo.id === id)
+  todo.complete = ! todo.complete
+  setTodos(newTodos)
+}
 
 
 function handleAddTodo(e) {
@@ -41,7 +48,7 @@ function handleAddTodo(e) {
       <header className="App-header">
       
       <h1> To do list</h1>
-      <TodoList todos={todos}/>
+      <TodoList todos={todos} toggleTodo={toggleTodo}/>
       <input ref={todoNameRef} type = "text"/>
       <button onClick = {handleAddTodo}>Add Todo</button>
       <button>Clear list</button>
